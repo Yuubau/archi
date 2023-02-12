@@ -48,9 +48,9 @@ public class ConsultantService {
             if(search.getMaxDailyRate() != null && c.getDailyRate().compareTo(search.getMaxDailyRate()) == 1) {
                 continue;
             }
-            if(!search.getSkills().isEmpty()) {
+            if(search.getSkills() != null && !search.getSkills().isEmpty()) {
                 boolean flag = false;
-                for(Skill s:c.getSkills()) {
+                for(Skill s:search.getSkills()) {
                     if(!c.getSkills().contains(s)) {
                         flag = true;
                         break;

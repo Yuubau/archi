@@ -26,5 +26,3 @@ public class ConsultantRestAdapter implements ConsultantPort {
     }
 
 }
-
-}

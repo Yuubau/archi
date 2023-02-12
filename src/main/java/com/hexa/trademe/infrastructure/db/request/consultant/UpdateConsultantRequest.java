@@ -1,4 +1,4 @@
-package com.hexa.trademe.infrastructure.db;
+package com.hexa.trademe.infrastructure.db.request.consultant;
 
 import com.hexa.trademe.domain.domainclass.Job;
 import com.hexa.trademe.domain.domainclass.Skill;

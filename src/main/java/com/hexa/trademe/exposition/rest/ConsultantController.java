@@ -6,8 +6,7 @@ import com.hexa.trademe.adapter.rest.ConsultantRestAdapter;
 import com.hexa.trademe.adapter.db.InMemoryDBAdapter;
 import com.hexa.trademe.infrastructure.db.request.consultant.CreateConsultantRequest;
 import com.hexa.trademe.infrastructure.db.request.consultant.SearchConsultantRequest;
-import com.hexa.trademe.infrastructure.db.CreateConsultantRequest;
-import com.hexa.trademe.infrastructure.db.UpdateConsultantRequest;
+import com.hexa.trademe.infrastructure.db.request.consultant.UpdateConsultantRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

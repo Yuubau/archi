@@ -20,4 +20,11 @@ public class ConsultantRestAdapter implements ConsultantPort {
         return new UpdateConsultant(firstName,lastName,skills,dailyRate);
     }
 
+    @Override
+    public Consultant search() {
+        return null;
+    }
+
+}
+
 }

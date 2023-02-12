@@ -15,4 +15,7 @@ public interface ConsultantPort {
                                              List<Job> jobs, BigDecimal dailyRate);
 
     public UpdateConsultant update(String firstName, String lastName, List<Skill> skills, BigDecimal dailyRate);
+
+    public Consultant search();
+
 }

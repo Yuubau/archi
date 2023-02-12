@@ -13,6 +13,10 @@ public class Consultant {
     private List<Job> jobs;
     private BigDecimal dailyRate;
 
+    public Consultant() {
+
+    }
+
     public Consultant(String firstName, String lastName, List<Skill> skills,
                       List<Job> jobs, BigDecimal dailyRate) {
         this.firstName = firstName;

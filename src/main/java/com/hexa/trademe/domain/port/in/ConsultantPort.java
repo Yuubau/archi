@@ -12,4 +12,7 @@ public interface ConsultantPort {
 
     public Consultant create(String firstName, String lastName, List<Skill> skills,
                                              List<Job> jobs, BigDecimal dailyRate);
+
+    public Consultant search();
+
 }

@@ -14,4 +14,10 @@ public class ConsultantRestAdapter implements ConsultantPort {
                              List<Job> jobs, BigDecimal dailyRate) {
         return new Consultant(firstName, lastName, skills, jobs, dailyRate);
     }
+
+    @Override
+    public Consultant search() {
+        return null;
+    }
+
 }

@@ -13,6 +13,12 @@ public class InMemoryDBAdapter implements DBPort {
     }
 
     @Override
+    public Consultant updateConsultant(Consultant consultant) {
+        InMemory.getInstance().updateConsultant(consultant);
+        return consultant;
+    }
+
+    @Override
     public Consultant findById(Integer id) {
         return InMemory.getInstance().findById(id);
     }

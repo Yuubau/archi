@@ -43,6 +43,16 @@ public class InMemory implements DBPort {
     }
 
     @Override
+    public Consultant updateConsultant(Consultant consultant) {
+        for(Integer cId:this.consultants.keySet()){
+            if(cId == consultant.getId()) {
+                this.consultants.replace(cId,new ConsultantModel(consultant));
+            }
+        }
+        return consultant;
+    }
+
+    @Override
     public Consultant findById(Integer id) {
         for(Integer cId:this.consultants.keySet()){
             if(cId == id) {

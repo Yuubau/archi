@@ -15,6 +15,8 @@ public interface DBPort {
 
     public List<Consultant> getAllConsultants();
 
+    public Consultant updateConsultant(Consultant consultant);
+
 
     Consultant findById(Integer id);
 }

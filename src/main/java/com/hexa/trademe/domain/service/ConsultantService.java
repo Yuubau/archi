@@ -4,10 +4,8 @@ import com.hexa.trademe.domain.domainclass.Consultant;
 import com.hexa.trademe.domain.domainclass.ConsultantSearch;
 import com.hexa.trademe.domain.domainclass.Job;
 import com.hexa.trademe.domain.domainclass.Skill;
-import com.hexa.trademe.domain.domainclass.UpdateConsultant;
 import com.hexa.trademe.domain.port.in.ConsultantPort;
 import com.hexa.trademe.domain.port.out.DBPort;
-import com.hexa.trademe.adapter.db.InMemoryDBAdapter;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -31,8 +29,7 @@ public class ConsultantService {
     public Consultant updateConsultant(Integer id,String firstName, String lastName, List<Skill> skills,
                                        BigDecimal dailyRate) throws Exception {
 
-        //Consultant consultant = dbPort.getByID(id)
-        Consultant consultant = new Consultant("firstName","lastName",skills, new ArrayList<Job>(), new BigDecimal(0));
+        Consultant consultant = dbPort.findById(id);
         if (!firstName.isBlank()){
                 consultant.setFirstName(firstName);
         }else{
@@ -54,9 +51,7 @@ public class ConsultantService {
             throw new Exception("skills manquant");
         }
 
-        //UpdateConsultant toUpdateConsultant = port.update(firstName, lastName, skills, dailyRate);
-
-        return dbPort.saveConsultant(consultant);
+        return dbPort.updateConsultant(consultant);
     }
 
     public List<Consultant> searchConsultant(ConsultantSearch search) {
